@@ -15,6 +15,7 @@ var nameDayModule = require('./src/name-day')
 var internationalDayModule = require('./src/international-day')
 var significantDayModule = require('./src/significant-day')
 var wishModule = require('./src/wish')
+var horoscopeModule = require('./src/sign-horoscope')
 
 /**
  * Spusteni serveru
@@ -44,7 +45,8 @@ app.get('/today', (req, res) => {
         nameDayWish: wishModule.get(),
         publicHolidays: holidaysModule.get(today),
         internationalHoliday: internationalDayModule.get(today),
-        SignificantDay: null, 
+        significantDay: significantDayModule.get(today), 
+        signAndHoroscope: horoscopeModule.get(today),
         wiki: wikiModule.get(today)
     })
 });
@@ -67,7 +69,8 @@ app.get('/date/:givenDate', (req, res) => {
             nameDayWish: wishModule.get(),
             publicHolidays: holidaysModule.get(date),
             internationalHoliday: internationalDayModule.get(date),
-            SignificantDay: null, 
+            significantDay: significantDayModule.get(date), 
+            signAndHoroscope: horoscopeModule.get(date),
             wiki: wikiModule.get(date)
         })
     }
