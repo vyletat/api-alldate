@@ -1,6 +1,12 @@
 var moment = require('moment');
 module.exports.FORMAT = 'YYYY-MM-DD'
 
+/**
+ * Metoda vrátí objekt s informacemi o zadaném datu.
+ * 
+ * @param {*} date      Datum ve formátu ISO - YYYY-MM-DD.
+ * @returns             Objekt s informacemi o datu.
+ */
 module.exports.getISODate = function (date) {
     const momentDate = moment(date);
     return {
@@ -13,6 +19,12 @@ module.exports.getISODate = function (date) {
     }
 }
 
+/**
+ * Metoda vrátí objekt s informacemi (dnem v mesici a mesicem v roce) o zadaném datu.
+ * 
+ * @param {*} date      Datum ve formátu ISO - YYYY-MM-DD.
+ * @returns             Objekt s dnem v mesici a mesicem v roce.
+ */
 module.exports.getDayMonth = function (date) {
     const momentDate = moment(date);
     return {

@@ -1,6 +1,9 @@
 var dateModule = require('./date');
 
-// https://www.kurzy.cz/kalendar/mezinarodni-dny/2021/
+/**
+ * CS Mezinárodní dny
+ * https://www.kurzy.cz/kalendar/mezinarodni-dny/2021/
+ */
 const internationalDays = {
     1: {
         1: ['Světový den míru'],
@@ -398,6 +401,12 @@ const internationalDays = {
     }
 } 
 
+/**
+ * 
+ * 
+ * @param {*} date 
+ * @returns 
+ */
 module.exports.get = function (date) {
     const params = dateModule.getDayMonth(date);
     const month = params.month;

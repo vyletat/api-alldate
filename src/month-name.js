@@ -1,5 +1,8 @@
 var dateModule = require('./date.js')
 
+/**
+ * CS názvy dní v týdnu
+ */
 const dayNames = {
     1: 'pondělí',
     2: 'úterý',
@@ -10,6 +13,9 @@ const dayNames = {
     7: 'neděle'
 }
 
+/**
+ * CS názvy měsíců v nominativním a genitivním pádě
+ */
 const monthNames = {
     1: {
         nominative: 'leden',
@@ -61,6 +67,12 @@ const monthNames = {
     }
 }
 
+/**
+ * Návratové metoda vracející objekt s názvy dnů a měsíců.
+ * 
+ * @param {*} date 
+ * @returns 
+ */
 module.exports.getMonth = function (date) {
     const params = dateModule.getDayMonth(date);
     const month = params.month;

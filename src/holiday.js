@@ -1,12 +1,15 @@
 var dateModule = require('./date.js')
 
-// http://svatky.centrum.cz/svatky/statni-svatky/
+/**
+ * CS Státní svátky
+ * http://svatky.centrum.cz/svatky/statni-svatky/
+ */
 const holidays = {
     1: {
         1: ['Den obnovy samostatného českého státu', 'Nový rok']
     },
     4: {
-        // TODO: meni se
+        // TODO: Meni se
         2: ['Velký pátek'],
         5: ['Velikonoční pondělí'],
     },
@@ -35,6 +38,12 @@ const holidays = {
     }
 }
 
+/**
+ * 
+ * 
+ * @param {*} date 
+ * @returns 
+ */
 module.exports.get = function (date) {
     const params = dateModule.getDayMonth(date);
     const day = params.day;

@@ -1,0 +1,1 @@
+// Pripraveno pro jazykove mutace

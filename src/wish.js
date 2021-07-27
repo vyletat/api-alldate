@@ -1,5 +1,5 @@
 /*
-* 
+* CS Přání k svátku
 */
 const wishes = {
     long: [ `Na mém stolním kalendáři
@@ -159,7 +159,7 @@ const wishes = {
     Hodně všeho, co by za to stálo.`,
     `Dneska máš svátek,
     to je ale překvapení,
-    posílám ti všechna nej,
+    posílám ti všechna nej, 
     ať se Ti všechna přání splní.`],
     short: [
         `Krásný svátek měj,
@@ -193,6 +193,11 @@ const wishes = {
     ]
 }
 
+/**
+ * Návratová metoda pro vrácení náhodného krátkého a náhodného dlouhého přání.
+ * 
+ * @returns 
+ */
 module.exports.get = function () {
     const randomLong = Math.floor(Math.random() * wishes.long.length);
     const randomShort = Math.floor(Math.random() * wishes.short.length);

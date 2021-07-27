@@ -1,6 +1,9 @@
 var dateModule = require('./date.js')
 
-// https://www.naplanuj-to.cz/kalendar-jmen
+/**
+ * CS Kalendář jmen
+ * https://www.naplanuj-to.cz/kalendar-jmen
+ */
 const nameDays = {
     1: {
         1: ['Nový rok'],
@@ -400,13 +403,16 @@ const nameDays = {
     },
 } 
 
-
+/**
+ * 
+ * 
+ * @param {*} date 
+ * @returns 
+ */
 module.exports.get = function (date) {
     const params = dateModule.getDayMonth(date);
     const day = params.day;
     const month = params.month;
     
     return nameDays[month][day]
-    
-
 };

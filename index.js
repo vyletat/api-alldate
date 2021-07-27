@@ -1,7 +1,12 @@
+// Import knihoven
 const app = require('express')();
+const express = require('express');
+const router = express.Router();
 const moment = require('moment');
+const path = require('path');
 const PORT = process.env.PORT || 8081
 
+// Import vlastních modulů
 var holidaysModule = require('./src/holiday')
 var dateModule = require('./src/date')
 var monthNameModule = require('./src/month-name')
@@ -15,19 +20,19 @@ var wishModule = require('./src/wish')
  * Spusteni serveru
  */
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`) 
+    console.log(`Server bezi na adrese http://localhost:${PORT}`) 
 })
 
 /**
- * 
+ * TODO: Načtení úvodní stránky s informacemi - HTML?!
  */
 app.get('/', (req, res) => {
     // TODO: Uvodni stranku s info
-    res.send('Hello World!');
+    res.status(200).send(``);
 })
 
 /**
- * 
+ * Vratí informace k dnešnímu datu.
  */
 app.get('/today', (req, res) => {
     var today = moment();
@@ -45,7 +50,7 @@ app.get('/today', (req, res) => {
 });
 
 /**
- * 
+ * Vratí infomace k zadanému datu.
  */
 app.get('/date/:givenDate', (req, res) => {
     const date = req.params.givenDate;
@@ -66,5 +71,4 @@ app.get('/date/:givenDate', (req, res) => {
             wiki: wikiModule.get(date)
         })
     }
-
 });

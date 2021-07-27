@@ -1,4 +1,7 @@
-// https://www.kurzy.cz/kalendar/vyznamne-dny/
+/**
+ * CS významné dny
+ * https://www.kurzy.cz/kalendar/vyznamne-dny/
+ */
 const significantDays = {
     1: {
         1: [''],
@@ -397,3 +400,15 @@ const significantDays = {
         31: ['']
     }
 }
+
+/**
+ * 
+ * 
+ * @param {*} date 
+ */
+module.exports.get = function (date) {
+    const params = dateModule.getISODate(date);
+    const day = params.day;
+    const month = params.month;
+
+};
