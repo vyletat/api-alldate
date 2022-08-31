@@ -1,5 +1,7 @@
 var dateModule = require('./date.js')
 
+// ? TODO: Popis jmen
+
 /**
  * CS Kalendář jmen
  * https://www.naplanuj-to.cz/kalendar-jmen
@@ -68,8 +70,8 @@ const nameDays = {
         27: ['Alexandr'],
         28: ['Lumír'],
         29: ['Horymír'],
-        30: [''],
-        31: ['']
+        30: [null],
+        31: [null]
     },
     3: {
         1: ['Bedřich', 'Bedřiška'],
@@ -135,7 +137,7 @@ const nameDays = {
         28: ['Vlastislav'],
         29: ['Robert'],
         30: ['Blahoslav'],
-        31: ['']
+        31: [null]
     },
     5: {
         1: ['Svátek práce'],
@@ -201,7 +203,7 @@ const nameDays = {
         28: ['Lubomír', 'Lubomíra'],
         29: ['Petr', 'Pavel'],
         30: ['Šárka'],
-        31: ['']
+        31: [null]
     },
     7: {
         1: ['Jaroslava'],
@@ -300,7 +302,7 @@ const nameDays = {
         28: ['Václav', 'Václava', 'Den české státnosti'],
         29: ['Michal', 'Michael'],
         30: ['Jeroným'],
-        31: ['']
+        31: [null]
     },
     10: {
         1: ['Igor'],
@@ -366,7 +368,7 @@ const nameDays = {
         28: ['René'],
         29: ['Zina'],
         30: ['Ondřej'],
-        31: ['']
+        31: [null]
     },
     12: {
         1: ['Iva'],

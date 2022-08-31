@@ -4,12 +4,15 @@ const express = require('express');
 const router = express.Router();
 const moment = require('moment');
 const path = require('path');
+
+// Konstanty
 const PORT = process.env.PORT || 8081
 
 // Import vlastních modulů
 var holidaysModule = require('./src/holiday')
 var dateModule = require('./src/date')
 var monthNameModule = require('./src/month-name')
+var dayNameModule = require('./src/day-name')
 var wikiModule = require('./src/wiki')
 var nameDayModule = require('./src/name-day')
 var internationalDayModule = require('./src/international-day')
@@ -29,7 +32,7 @@ app.listen(PORT, () => {
  */
 app.get('/', (req, res) => {
     // TODO: Uvodni stranku s info
-    res.status(200).send(``);
+    res.status(200).send(`Vitejte na AllDate API, pokracujte prosim na endpoint /today nebo /date/YYYY-MM-DD.`);
 })
 
 /**
@@ -41,6 +44,7 @@ app.get('/today', (req, res) => {
     res.status(200).send({
         date: dateModule.getISODate(today),
         monthName: monthNameModule.getMonth(today),
+        dayName: dayNameModule.getDay(today),
         nameDay: nameDayModule.get(today),
         nameDayWish: wishModule.get(),
         publicHolidays: holidaysModule.get(today),
@@ -65,6 +69,7 @@ app.get('/date/:givenDate', (req, res) => {
         res.status(200).send({
             date: dateModule.getISODate(date),
             monthName: monthNameModule.getMonth(date),
+            dayName: dayNameModule.getDay(date),
             nameDay: nameDayModule.get(date),
             nameDayWish: wishModule.get(),
             publicHolidays: holidaysModule.get(date),

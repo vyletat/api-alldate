@@ -1,8 +1,36 @@
 const moment = require('moment');
 var dateModule = require('./date.js')
 
+
+
+const signsOfTheZodiac_template = [
+    {
+        name: '',
+        from: moment('2000-03-21'),
+        to: moment('2000-04-20'),
+        symbols: {
+            trees: [
+                {
+                    name: '',
+                    description: ''
+                },
+            ],
+            rocks: [
+                {
+                    name: '',
+                    description: ''
+                },
+            ]
+        }
+    },
+]
+
 /**
  * CS Znamení horoskopu
+ * 
+ * https://www.idobryden.cz/cteni/kazde-znameni-astrologickeho-zverokruhu-ma-svuj-strom-53349.html
+ * https://www.malachit-obchod.cz/zverokruh-a-lecive-kameny/kameny-a-znameni-zverokruhu/
+ * https://www.prirodenadosah.cz/blog/stromy-podle-znameni-zverokruhu/
  */
 const signsOfTheZodiac = [
     {
@@ -10,14 +38,78 @@ const signsOfTheZodiac = [
         from: moment('2000-03-21'),
         to: moment('2000-04-20'),
         symbols: {
-            tree: {
-                name: '',
-                description: ''
-            },
-            rock: {
-                name: '',
-                description: ''
-            }
+            trees: [
+                {
+                    name: 'dub',
+                    description: 'Svou vitalitou určuje sílu člověka narozeného v den jarní rovnodennosti, v den, kdy se uvolňuje obrovská přírodní energie. Znaky člověka narozeného ve znamení dubu jsou životnost, odvaha a síla. Berani neohroženě brání slabší. Dub je stromem, který se nedá pokořit. Podporuje osobní odvahu a chrání nás před negativními vlivy okolí. Dub je symbolem síly a moci, podporuje sebedůvěru a přitahuje peníze.'
+                },
+                {
+                    name: 'akát',
+                    description: 'Přináší úlevu od stresu, naplní člověka optimismem, energií a dobrou náladou.'
+                },
+                {
+                    name: 'olše',
+                    description: 'Posiluje duševní moc člověka, ochrání vás před hádkami a spory, probouzí mateřské a ženské impulsy.'
+                },
+                {
+                    name: 'túje',
+                    description: 'Má detoxikační účinky.'
+                }
+            ],
+            rocks: [
+                {
+                    name: 'achát',
+                    description: ''
+                },
+                {
+                    name: 'akvamarín',
+                    description: ''
+                },
+                {
+                    name: 'ametyst',
+                    description: ''
+                },
+                {
+                    name: 'citrín',
+                    description: ''
+                },
+                {
+                    name: 'diamant',
+                    description: ''
+                },
+                {
+                    name: 'granát',
+                    description: ''
+                },
+                {
+                    name: 'hematit',
+                    description: ''
+                },
+                {
+                    name: 'jadeit',
+                    description: ''
+                },
+                {
+                    name: 'jaspis červený',
+                    description: ''
+                },
+                {
+                    name: 'karneol',
+                    description: ''
+                },
+                {
+                    name: 'magnetit',
+                    description: ''
+                },
+                {
+                    name: 'rubín',
+                    description: ''
+                },
+                {
+                    name: 'tygří oko',
+                    description: ''
+                },
+            ]
         }
     },
     {
@@ -25,11 +117,11 @@ const signsOfTheZodiac = [
         from: moment('2000-04-21'),
         to: moment('2000-05-20'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -40,11 +132,11 @@ const signsOfTheZodiac = [
         from: moment('2000-05-21'),
         to: moment('2000-06-21'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -55,11 +147,11 @@ const signsOfTheZodiac = [
         from: moment('2000-06-22'),
         to: moment('2000-07-23'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -70,11 +162,11 @@ const signsOfTheZodiac = [
         from: moment('2000-07-23'),
         to: moment('2000-08-22'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -85,11 +177,11 @@ const signsOfTheZodiac = [
         from: moment('2000-08-23'),
         to: moment('2000-09-22'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -100,11 +192,11 @@ const signsOfTheZodiac = [
         from: moment('2000-09-23'),
         to: moment('2000-10-23'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -115,11 +207,11 @@ const signsOfTheZodiac = [
         from: moment('2000-10-24'),
         to: moment('2000-11-22'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -130,11 +222,11 @@ const signsOfTheZodiac = [
         from: moment('2000-11-23'),
         to: moment('2000-12-21'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -145,11 +237,11 @@ const signsOfTheZodiac = [
         from: moment('2000-12-22'),
         to: moment('2000-01-20'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -160,11 +252,11 @@ const signsOfTheZodiac = [
         from: moment('2000-01-21'),
         to: moment('2000-02-20'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -175,11 +267,11 @@ const signsOfTheZodiac = [
         from: moment('2000-02-21'),
         to: moment('2000-03-20'),
         symbols: {
-            tree: {
+            trees: {
                 name: '',
                 description: ''
             },
-            rock: {
+            rocks: {
                 name: '',
                 description: ''
             }
@@ -265,7 +357,7 @@ module.exports.get = function (date) {
     let dateTransfer = moment(date).year(2000);
     for (let index = 0; index < signsOfTheZodiac.length; index++) {
         if (signsOfTheZodiac[index].from <= dateTransfer && dateTransfer <= signsOfTheZodiac[index].to) {
-            tempSignOfTheZodiac = signsOfTheZodiac[index].name;
+            tempSignOfTheZodiac = signsOfTheZodiac[index].name;     // TODO: trees a rocks, from-to
         }
         // console.log(signsOfTheZodiac[index].from <= dateTransfer, signsOfTheZodiac[index].from);
         // console.log(dateTransfer <= signsOfTheZodiac[index].to, signsOfTheZodiac[index].to);

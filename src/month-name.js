@@ -14,7 +14,7 @@ const dayNames = {
 }
 
 /**
- * CS názvy měsíců v nominativním a genitivním pádě
+ * CS názvy měsíců v nominativním (1. pad) a genitivním (2. pad) pádě
  */
 const monthNames = {
     1: {
@@ -26,7 +26,7 @@ const monthNames = {
         genitive: 'února'
     },
     3: {
-        nominative: 'Březen',
+        nominative: 'březen',
         genitive: 'března'
     },
     4: {

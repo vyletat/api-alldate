@@ -32,3 +32,7 @@ module.exports.getDayMonth = function (date) {
         month: momentDate.month() + 1           // Mesice jsou 0-11
     }
 }
+
+/**
+ * TODO: Metoda co vraci datum v zadanem formatu
+ */

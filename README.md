@@ -60,5 +60,10 @@ Po stažení repozitáře spustte příkaz `npm install`, aby jste stáhli a akt
 Aplikaci spustíte pomocí příkazu `npm run start` nebo `npm run run`.
 
 
+## Changelog
+### Verze 1.0
 
-Verze: 1.0, Autor: Tomáš Vyleta
+### Verze 1.1
+
+
+Verze: 1.1, Autor: Tomáš Vyleta
