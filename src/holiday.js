@@ -50,7 +50,7 @@ module.exports.get = function (date) {
     const month = params.month;
     
     // TODO: Lepe asi
-    if (holidays[month] == undefined || holidays[month][day] == undefined) {
+    if (holidays[month] === undefined || holidays[month][day] === undefined) {
         return {
             publicHoliday: false,
             holidays: null

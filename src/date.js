@@ -14,7 +14,7 @@ module.exports.getISODate = function (date) {
         day: momentDate.date(),
         week: momentDate.week(),
         month: momentDate.month() + 1,        // Mesice jsou 0-11
-        quater: momentDate.quarter(),
+        quarter: momentDate.quarter(),
         year: momentDate.year()
     }
 }

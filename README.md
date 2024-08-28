@@ -17,7 +17,7 @@ Pro datum 27.07.2021:
       "day":27,
       "week":31,
       "month":7,
-      "quater":3,
+      "quarter":3,
       "year":2021
    },
    "monthName":{

@@ -59,7 +59,7 @@ app.get('/date/:givenDate', (req, res) => {
     
     if (!moment(date, dateModule.FORMAT).isValid()) {
         res.status(400).send({
-            message: 'Spatny format data, prosim zadejte datum ve tveru YYYY-MM-DD.'
+            message: 'Spatny format data, prosim zadejte datum ve tvaru YYYY-MM-DD.'
         });
     } else {
         res.status(200).send({
